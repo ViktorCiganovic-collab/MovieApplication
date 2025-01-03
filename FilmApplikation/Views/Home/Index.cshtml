@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center row">
+    <div class="col-md-12 col-sm-12">
+        <div class="hero-container">
+            <!-- Overlay to darken the background -->
+            <div class="overlay"></div>
+            <!-- Image -->
+            <img class="img-fluid hero" src="https://preview.redd.it/2jhtmqhg4mo81.png?width=1920&format=png&auto=webp&s=0d41709c3c478d2bcadfd8f2450271f175c0676f" />
+
+            <!-- Text inside the image container -->
+            <div class="hero-text heading">
+                <h1 class="display-4">Welcome to MovieMania!</h1>
+                <a asp-action="Index" asp-controller="Movies" class="btn btn-primary">See Our Movies</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer text-muted">
+    <div class="container">
+        &copy; 2025 - MovieMania - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white">Privacy</a>
+    </div>
+</footer>

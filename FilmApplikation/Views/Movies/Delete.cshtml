@@ -1,0 +1,35 @@
+﻿@model FilmApplikation.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section class="text-center text-white">
+
+    <h1>Delete</h1>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+
+
+        <h3>Name:</h3>
+        <h3>@Model.Title</h3>
+
+        <h3>Story:</h3>
+        <p>@Model.Description</p>
+
+        <h3>Grade From Other Users:</h3>
+        <p>@Model.Rating</p>
+
+        <img class="img-fluid detailImg" src="@Model.imgUrl" />
+
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="MovieId" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index" class="hyperlink">Back to List</a>
+        </form>
+    </div>
+
+
+</section>

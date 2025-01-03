@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FilmApplikation.Models.Movie>
+
+@{
+    ViewData["Title"] = "Movie Sortiment";
+}
+
+<section class="moviesMainPage text-center my-2">
+
+    <h1 class="text-white">Movie Sortiment</h1>
+
+    <!-- Search Form -->
+    <div class="col-xs-6 w-50 mx-auto justify-content-center">
+        <form method="get" asp-action="Index">
+            <input type="text" name="searchQuery" class="form-control" placeholder="Search for a movie..." value="@Context.Request.Query["searchQuery"]" />
+            <button type="submit" class="btn btn-primary mt-2">Search</button>
+        </form>
+    </div>
+
+    @if (User.IsInRole("Administrator"))
+    {
+        <p class="my-3">
+            <a asp-action="Create" class="hyperlink">Create New</a>
+        </p>
+    }
+
+    <div class="row justify-content-center w-100 g-3 p-5">
+        @foreach (var item in Model)
+
+        {
+            <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="card text-dark">
+                    <img src="@item.imgUrl" class="card-img-top img-fluid" alt="Movie Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">
+                            @item.Description
+                        </p>
+                        <p>
+                            Rating: <strong>@item.Rating</strong>
+                        </p>
+                        <p>
+                            <a asp-action="Edit" asp-route-id="@item.MovieId" class="cardLinks">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.MovieId" class="cardLinks">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.MovieId" class="cardLinks">Delete</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</section>
+
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2025 - MovieMania - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-white">Privacy</a>
+    </div>
+</footer>
+
+

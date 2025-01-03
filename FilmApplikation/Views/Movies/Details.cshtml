@@ -1,0 +1,24 @@
+﻿@model FilmApplikation.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center text-white">Details</h1>
+
+<div class="text-center text-white">
+    <h4 class="text-center text-white">Movie</h4>
+
+    <div>
+        <h3>@Model.Title</h3>
+        <img class="img-fluid w-100 detailImg" src="@Model.imgUrl" />
+        <p>@Model.Description</p>
+        <p>Rating: @Model.Rating</p>
+
+    </div>
+
+</div>
+<div class="text-center">
+    <a asp-action="Edit" asp-route-id="@Model?.MovieId" class="hyperlink">Edit</a> |
+    <a asp-action="Index" class="hyperlink">Back to List</a>
+</div>
