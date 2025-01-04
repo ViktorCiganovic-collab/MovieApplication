@@ -9,6 +9,7 @@ This Movie App is built using the Model-View-Controller (MVC) architectural patt
 - **Entity Framework**: Facilitates seamless integration with the database, enabling Create, Read, Update, and Delete (CRUD) operations for movie records.
 - **User Authentication and Authorization**: Implements ASP.NET Identity to manage user accounts, roles, and permissions.
   - **Admins**: Have full CRUD permissions, allowing them to add, update, delete, and view movies.
+  - **Admin Dashboard**: There is an admin dashboard where admin can view users, edit and delete users.
   - **Users**: Can edit movie records, similar to admins, providing a collaborative environment.
   - **Non-Users**: Can only view movie information, ensuring secure and controlled access to the app's features.
 
