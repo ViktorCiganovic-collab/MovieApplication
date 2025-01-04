@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ao7p6JQP7Ss=",
+  "dgSpecHash": "ZzAx3VSfS28=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\source\\repos\\FilmApplikation\\FilmApplikation\\FilmApplikation.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Source\\Repos\\filmer\\FilmApplikation\\FilmApplikation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
